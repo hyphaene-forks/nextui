@@ -131,6 +131,12 @@ const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
 
   return createPortal(
     <ModalContext.Provider value={modalConfig}>
+      {/* not possible to pass direct css object, can we control this through props ? 
+      using nextjs, you need to declare global css to surcharge the css with custom one, not cool.
+      this is the wrapper, so every css applied is in the boundaries of the Backdrop acting as container.
+      => it is not easy to set the modal positioning :/
+      => we would imagine we can control this since we are using modal component
+      */}
       <Backdrop
         animated={animated}
         blur={blur}
