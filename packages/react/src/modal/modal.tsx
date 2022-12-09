@@ -136,6 +136,8 @@ const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
       this is the wrapper, so every css applied is in the boundaries of the Backdrop acting as container.
       => it is not easy to set the modal positioning :/
       => we would imagine we can control this since we are using modal component
+
+      nextui-backdrop-content is the class to target to surcharge modal css positioning, not intuitive also.
       */}
       <Backdrop
         animated={animated}
